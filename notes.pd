@@ -1,4 +1,4 @@
-#N canvas -8 -8 2048 1109 10;
+#N canvas 953 0 958 988 10;
 #X obj 68 81 dac~;
 #X obj 68 33 osc~ 440;
 #X obj 225 81 dac~;
@@ -33,7 +33,7 @@
 #X text 756 131 Note: F#;
 #X text 848 131 Note: G;
 #X obj 456 530 osc~;
-#X obj 456 578 dac~;
+#X obj 458 653 dac~;
 #X floatatom 456 483 5 0 0 0 - - -;
 #X msg 215 421 440;
 #X msg 693 421 740;
@@ -49,8 +49,10 @@
 #X obj 419 241 key;
 #X floatatom 419 289 5 0 0 0 - - -;
 #X obj 292 318 sel 97 115 100 102 103 104 106 107 108 59 39;
-#X connect 33 0 34 0;
-#X connect 33 0 34 1;
+#X obj 457 583 *~;
+#X obj 543 507 vsl 15 128 0 1 0 0 empty empty Volume 0 -9 0 10 -204800
+-1 -1 0 1;
+#X connect 33 0 50 0;
 #X connect 35 0 33 0;
 #X connect 36 0 35 0;
 #X connect 37 0 35 0;
@@ -76,3 +78,6 @@
 #X connect 49 8 46 0;
 #X connect 49 9 37 0;
 #X connect 49 10 38 0;
+#X connect 50 0 34 0;
+#X connect 50 0 34 1;
+#X connect 51 0 50 1;
